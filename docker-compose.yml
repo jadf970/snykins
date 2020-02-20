@@ -1,0 +1,17 @@
+version: '3'
+services:
+  snykins:
+    container_name: snykins
+    build: ./
+    volumes:
+      - snykins:/var/jenkins_home
+      - ${PROJECT_DIR}:/var/jenkins_home/jobs/Snyk/workspace/
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      JAVA_OPTS: -Djenkins.install.runSetupWizard=false
+      SNYK_API_TOKEN: ${SNYK_API_TOKEN}
+    ports:
+      - "8080:8080"
+
+volumes:
+  snykins: {}
