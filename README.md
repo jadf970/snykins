@@ -24,7 +24,7 @@ make
 make start
 ```
 
-Jenkins will now be available at [localhost:8080](http://localhost:8080o).
+Jenkins will now be available at [localhost:8080](http://localhost:8080o). The username and password are both `admin`.
 
 ### Cleanup
 
